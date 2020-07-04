@@ -11,7 +11,7 @@
 				<span class="mui-tab-label">首页</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/member">
-				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/shopcar">
@@ -41,9 +41,11 @@ export default {
 				this.$(".mint-header").css("transform","translateY(-100%) rotateX(90deg)");
 				this.$(".mint-header").css("transform-origin","center bottom 0");
 				this.$(".mint-header").css("opacity","0");
+			}, 3000);
+			setTimeout(() => {
 				this.$(".main").css("transform","translatey(-40px)")
 				this.$(".main").css("transition","0.6s")
-			}, 3000);
+			}, 3500);
 		}
 	},
 	mounted: function() {

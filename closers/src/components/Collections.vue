@@ -48,7 +48,7 @@ export default {
                         that.$(item).css({
                             position : "absolute",
                             left :minImgIndex*(28+3)+3+"%",
-                            top : min+40 +'px',
+                            top : min +'px',
                         })
                         
                         heightArr[minImgIndex] += that.$(item).height()+10;
@@ -64,7 +64,7 @@ export default {
         load(){
             // let that = this;
             // this.$.ajax({
-            //     url:"http://localhost:8080/collection.txt",
+            //     url:"http://localhost:8081/collection.txt",
             //     dataType : "json",
             //     success(arr){
                     

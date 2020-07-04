@@ -1,6 +1,6 @@
 <template>
     <div>
-        <mt-search v-model="value"></mt-search>
+        <mt-search placeholder="Search"></mt-search>
     </div>
 </template>
 <script>
@@ -15,4 +15,7 @@ export default {
 </script>
 
 <style  scoped>
+    .mint-searchbar-core{
+        margin-top: 15px !important;
+    }
 </style>

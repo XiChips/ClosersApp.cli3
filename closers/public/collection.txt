@@ -1,0 +1,7 @@
+{
+    "src" : [
+         "./colImg/10.jpg",
+         "./colImg/11.jpg"
+    ]
+    
+}

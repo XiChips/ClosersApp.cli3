@@ -85,7 +85,10 @@ export default {
             }).catch(function(err){
                     console.log(err)
             })
-            this.waterFall()
+            
+            setTimeout(() => {
+                this.waterFall()
+            }, 100);
         }
     },
     beforeMount: function(){
@@ -93,9 +96,6 @@ export default {
     }
     ,
     mounted: function(){
-        setTimeout(() => {
-            this.waterFall()
-        }, 100);
             
         
        

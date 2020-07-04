@@ -1,7 +1,9 @@
 <template>
     <div class="container">
-        <mt-header fixed title="Welcome to Closers !"></mt-header>
-        <router-view></router-view>
+		<div class="main">
+			<mt-header fixed title="Welcome to Closers !"></mt-header>
+			<router-view></router-view>
+		</div>
         
         <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -32,7 +34,21 @@ export default {
 			msg :'hello',
 			count : this.$store.state.count
 		}
-	}
+	},
+	methods: {
+		hidden (){
+			setTimeout(() => {
+				this.$(".mint-header").css("transform","translateY(-100%) rotateX(90deg)");
+				this.$(".mint-header").css("transform-origin","center bottom 0");
+				this.$(".mint-header").css("opacity","0");
+				this.$(".main").css("transform","translatey(-40px)")
+				this.$(".main").css("transition","0.6s")
+			}, 3000);
+		}
+	},
+	mounted: function() {
+		this.hidden()
+	},
 }
 </script>
 
@@ -43,5 +59,8 @@ export default {
 	}
 	.mint-header{
 		background-color:deepskyblue;
+		opacity:1;
+		transform: translateY(0) rotateX(0);
+		transition: all 0.6s ease-in-out 0s;
 	}
 </style>

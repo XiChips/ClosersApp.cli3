@@ -29,11 +29,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data() {
     return {
-      msg: "hello",
-      count: this.$store.state.count
+      msg: "hello"
     };
   },
   methods: {
@@ -46,7 +47,10 @@ export default {
   },
   mounted: function() {
     this.hidden();
-  }
+  },
+  computed: {
+    ...mapState(['count'])
+  },
 };
 </script>
 

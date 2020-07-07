@@ -20,6 +20,7 @@ import "./lib/css/icons-extra.css";
 
 import $ from 'jquery';
 
+
 Vue.prototype.$ = $;
 Vue.config.productionTip = false;
 

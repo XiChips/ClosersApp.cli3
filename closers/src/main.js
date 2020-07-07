@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-import { Header, Swipe, SwipeItem} from "mint-ui";
+import { Header, Swipe, SwipeItem } from "mint-ui";
 import { Search } from 'mint-ui';
 
 Vue.component(Search.name, Search);
@@ -13,7 +13,7 @@ Vue.component(SwipeItem.name, SwipeItem);
 
 import axios from "axios";
 import VueAxios from "vue-axios";
-Vue.use(VueAxios,axios);
+Vue.use(VueAxios, axios);
 
 import "./lib/css/mui.css";
 import "./lib/css/icons-extra.css";

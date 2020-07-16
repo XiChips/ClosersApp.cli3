@@ -9,7 +9,7 @@
             <p class="mui-ellipsis">{{item.msg}}</p>
             <div class="info">
               <span>{{item.time}}</span>
-              <span>{{item.count}}</span>
+              <span class="click">点击：{{item.count}}</span>
             </div>
           </div>
         </a>
@@ -136,5 +136,8 @@ export default {
 }
 .info span:nth-child(2) {
   margin-right: 70px;
+}
+.click{
+  margin-left: 10%;
 }
 </style>

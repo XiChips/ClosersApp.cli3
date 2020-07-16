@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
 export default {
   data() {
@@ -39,18 +39,27 @@ export default {
   },
   methods: {
     hidden() {
+      this.$(".mint-header").css("transform", "translateY(-100%)");
+      this.$(".mint-header").css("opacity", "0");
+    },
+    autoHidden() {
       setTimeout(() => {
-        this.$(".mint-header").css("transform", "translateY(-100%)");
-        this.$(".mint-header").css("opacity", "0");
+        this.hidden();
       }, 3000);
+    },
+    clickHidden() {
+      this.$("html").click(()=> {
+        this.hidden()
+      });
     }
   },
   mounted: function() {
-    this.hidden();
+    this.autoHidden();
+    this.clickHidden();
   },
   computed: {
-    ...mapState(['count'])
-  },
+    ...mapState(["count"])
+  }
 };
 </script>
 

@@ -82,23 +82,17 @@ export default {
                     let imgArr = { src : require (arr.data.src[i]+'') }
                     this.img.unshift(imgArr)
                 }
+                this.waterFall()
             }).catch(function(err){
                     console.log(err)
             })
-            this.waterFall()
         }
     },
     beforeMount: function(){
-        this.load()
     }
     ,
     mounted: function(){
-        setTimeout(() => {
-            this.waterFall()
-        }, 100);
-            
-        
-       
+        this.load()
     },
     
 }
